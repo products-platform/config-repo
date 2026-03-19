@@ -1,0 +1,18 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: product-service
+
+  datasource:
+    url: jdbc:mysql://localhost/product_stage_db
+    username: stage_user
+    password: stage_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "PRODUCT-SERVICE - STAGE ENVIRONMENT"
