@@ -1,0 +1,18 @@
+server:
+  port: 8008
+
+spring:
+  application:
+    name: payment-service
+
+  datasource:
+    url: jdbc:mysql://localhost/payment_prod_db
+    username: prod_user
+    password: prod_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "PAYMENT-SERVICE - PROD ENVIRONMENT"

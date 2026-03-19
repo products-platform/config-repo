@@ -1,0 +1,18 @@
+server:
+  port: 8013
+
+spring:
+  application:
+    name: login-service
+
+  datasource:
+    url: jdbc:mysql://localhost/login_stage_db
+    username: stage_user
+    password: stage_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "LOGIN-SERVICE - STAGE ENVIRONMENT"

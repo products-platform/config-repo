@@ -1,0 +1,18 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: order-service
+
+  datasource:
+    url: jdbc:mysql://localhost/order_prod_db
+    username: prod_user
+    password: prod_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "ORDER-SERVICE - PROD ENVIRONMENT"

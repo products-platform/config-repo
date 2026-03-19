@@ -1,0 +1,18 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: order-service
+
+  datasource:
+    url: jdbc:mysql://localhost/order_stage_db
+    username: stage_user
+    password: stage_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "ORDER-SERVICE - STAGE ENVIRONMENT"

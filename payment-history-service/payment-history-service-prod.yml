@@ -1,0 +1,18 @@
+server:
+  port: 8020
+
+spring:
+  application:
+    name: payment-history-service
+
+  datasource:
+    url: jdbc:mysql://localhost/payment-history_prod_db
+    username: prod_user
+    password: prod_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "PAYMENT-HISTORY-SERVICE - PROD ENVIRONMENT"

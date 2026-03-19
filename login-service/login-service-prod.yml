@@ -1,0 +1,18 @@
+server:
+  port: 8014
+
+spring:
+  application:
+    name: login-service
+
+  datasource:
+    url: jdbc:mysql://localhost/login_prod_db
+    username: prod_user
+    password: prod_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "LOGIN-SERVICE - PROD ENVIRONMENT"

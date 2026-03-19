@@ -1,0 +1,18 @@
+server:
+  port: 8017
+
+spring:
+  application:
+    name: customer-service
+
+  datasource:
+    url: jdbc:mysql://localhost/customer_prod_db
+    username: prod_user
+    password: prod_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "CUSTOMER-SERVICE - PROD ENVIRONMENT"

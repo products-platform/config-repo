@@ -1,0 +1,18 @@
+server:
+  port: 8019
+
+spring:
+  application:
+    name: payment-history-service
+
+  datasource:
+    url: jdbc:mysql://localhost/payment-history_stage_db
+    username: stage_user
+    password: stage_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "PAYMENT-HISTORY-SERVICE - STAGE ENVIRONMENT"

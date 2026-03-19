@@ -1,0 +1,18 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: notification-service
+
+  datasource:
+    url: jdbc:mysql://localhost/notification_stage_db
+    username: stage_user
+    password: stage_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "NOTIFICATION-SERVICE - STAGE ENVIRONMENT"

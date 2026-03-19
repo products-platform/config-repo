@@ -1,0 +1,18 @@
+server:
+  port: 8018
+
+spring:
+  application:
+    name: payment-history-service
+
+  datasource:
+    url: jdbc:mysql://localhost/payment-history_dev_db
+    username: dev_user
+    password: dev_pass
+
+logging:
+  level:
+    root: DEBUG
+
+custom:
+  message: "PAYMENT-HISTORY-SERVICE - DEV ENVIRONMENT"

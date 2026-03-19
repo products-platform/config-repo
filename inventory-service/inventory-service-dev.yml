@@ -1,0 +1,18 @@
+server:
+  port: 8021
+
+spring:
+  application:
+    name: inventory-service
+
+  datasource:
+    url: jdbc:mysql://localhost/inventory_dev_db
+    username: dev_user
+    password: dev_pass
+
+logging:
+  level:
+    root: DEBUG
+
+custom:
+  message: "INVENTORY-SERVICE - DEV ENVIRONMENT"

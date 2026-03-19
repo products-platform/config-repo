@@ -1,0 +1,18 @@
+server:
+  port: 8023
+
+spring:
+  application:
+    name: inventory-service
+
+  datasource:
+    url: jdbc:mysql://localhost/inventory_prod_db
+    username: prod_user
+    password: prod_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "INVENTORY-SERVICE - PROD ENVIRONMENT"

@@ -1,0 +1,18 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: notification-service
+
+  datasource:
+    url: jdbc:mysql://localhost/notification_prod_db
+    username: prod_user
+    password: prod_pass
+
+logging:
+  level:
+    root: INFO
+
+custom:
+  message: "NOTIFICATION-SERVICE - PROD ENVIRONMENT"
