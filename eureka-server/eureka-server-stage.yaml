@@ -1,18 +1,18 @@
 server:
-  port: 8010
+  port: 8761
 
 spring:
   application:
-    name: product-service
+    name: eureka-server
 
-  datasource:
-    url: jdbc:mysql://localhost/product_stage_db
-    username: stage_user
-    password: stage_pass
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
 
-logging:
-  level:
-    root: INFO
-
-custom:
-  message: "PRODUCT-SERVICE - STAGE ENVIRONMENT"
+#for actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

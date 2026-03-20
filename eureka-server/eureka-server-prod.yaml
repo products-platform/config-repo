@@ -1,18 +1,18 @@
 server:
-  port: 8011
+  port: 8761
 
 spring:
   application:
-    name: product-service
+    name: eureka-server
 
-  datasource:
-    url: jdbc:mysql://localhost/product_prod_db
-    username: prod_user
-    password: prod_pass
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
 
-logging:
-  level:
-    root: INFO
-
-custom:
-  message: "PRODUCT-SERVICE - PROD ENVIRONMENT"
+#for actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
