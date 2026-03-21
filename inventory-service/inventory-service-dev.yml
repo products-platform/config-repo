@@ -1,18 +1,31 @@
 server:
-  port: 8021
+  port: 8084
 
 spring:
-  application:
-    name: inventory-service
-
   datasource:
-    url: jdbc:mysql://localhost/inventory_dev_db
-    username: dev_user
-    password: dev_pass
+    url: jdbc:postgresql://localhost:30432/inventory
+    username: hari
+    password: dudkrish1A
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 50
+        order_inserts: true
 
-logging:
-  level:
-    root: DEBUG
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: product-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
-custom:
-  message: "INVENTORY-SERVICE - DEV ENVIRONMENT"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
