@@ -1,18 +1,2 @@
 server:
-  port: 8015
-
-spring:
-  application:
-    name: customer-service
-
-  datasource:
-    url: jdbc:mysql://localhost/customer_dev_db
-    username: dev_user
-    password: dev_pass
-
-logging:
-  level:
-    root: DEBUG
-
-custom:
-  message: "CUSTOMER-SERVICE - DEV ENVIRONMENT"
+  port: 8083

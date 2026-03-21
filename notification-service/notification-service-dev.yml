@@ -1,18 +1,30 @@
 server:
-  port: 8003
-
+  port: 8086
 spring:
-  application:
-    name: notification-service
-
   datasource:
-    url: jdbc:mysql://localhost/notification_dev_db
-    username: dev_user
-    password: dev_pass
+    url: jdbc:postgresql://localhost:30432/notification
+    username: hari
+    password: dudkrish1A
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 50
+        order_inserts: true
 
-logging:
-  level:
-    root: DEBUG
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notification-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
-custom:
-  message: "NOTIFICATION-SERVICE - DEV ENVIRONMENT"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
