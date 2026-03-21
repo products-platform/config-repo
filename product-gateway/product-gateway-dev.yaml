@@ -1,3 +1,6 @@
+server:
+  port: 8761
+
 spring:
   cloud:
     gateway:
@@ -11,15 +14,6 @@ spring:
             allowedMethods:
               - GET
               - POST
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-    register-with-eureka: true
-    fetch-registry: true
-  instance:
-    prefer-ip-address: true
 
 gateway:
   security:
