@@ -3,11 +3,14 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:30432/inventory
-    username: hari
-    password: dudkrish1A
-    driver-class-name: org.postgresql.Driver
+    #url: jdbc:postgresql://localhost:30432/inventory
+    url: jdbc:oracle:thin:@localhost:31521/XEPDB1
+    username: inventory_db
+    password: inventory
+    #driver-class-name: org.postgresql.Driver
+    driver-class-name: oracle.jdbc.OracleDriver
   jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
       ddl-auto: none
     show-sql: true
