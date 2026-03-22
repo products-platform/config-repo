@@ -6,7 +6,7 @@ spring:
     #url: jdbc:postgresql://localhost:30432/products
     url: jdbc:oracle:thin:@localhost:31521/XEPDB1
     username: product_db
-    password: dudkrish1A
+    password: products
     #driver-class-name: org.postgresql.Driver
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
