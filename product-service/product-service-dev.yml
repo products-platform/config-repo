@@ -3,11 +3,14 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:30432/products
-    username: hari
+    #url: jdbc:postgresql://localhost:30432/products
+    url: jdbc:oracle:thin:@localhost:31521/XEPDB1
+    username: product_db
     password: dudkrish1A
-    driver-class-name: org.postgresql.Driver
+    #driver-class-name: org.postgresql.Driver
+    driver-class-name: oracle.jdbc.OracleDriver
   jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
       ddl-auto: none
     show-sql: true
