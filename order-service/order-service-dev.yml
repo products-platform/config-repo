@@ -1,10 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:30432/orders
-    username: hari
-    password: dudkrish1A
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:oracle:thin:@localhost:31521/XEPDB1
+    username: order_db
+    password: order
+    driver-class-name: oracle.jdbc.OracleDriver
   jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
       ddl-auto: none
     show-sql: true
