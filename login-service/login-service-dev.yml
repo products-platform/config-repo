@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:31521/XEPDB1
     username: user_db
-    password: user
+    password: users
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
     database-platform: org.hibernate.dialect.OracleDialect
